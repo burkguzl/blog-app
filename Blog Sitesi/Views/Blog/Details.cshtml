@@ -1,0 +1,26 @@
+﻿@model Blog_Sitesi.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+        <h1>@Model.Baslik</h1>
+        <hr />
+        <p>
+            <span class="glyphicon glyphicon-time"></span> @Model.Tarih
+        </p>
+        <hr />
+        <img class="img-responsive" src="http://placehold.it/900x300" alt="" />
+        <hr />
+        <h5>@Model.Yazar</h5>
+        <hr />
+        <p>@Model.İcerik</p>
+ 
+@section SagKolon
+    {
+
+    <br />
+    @Html.Partial("Arama")
+    @{Html.RenderAction("KategoriListesi", "Kategori");}
+
+}

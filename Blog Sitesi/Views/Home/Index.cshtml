@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Blog_Sitesi.Models.BlogModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Partial("BlogListesi", Model)
+
+@section SagKolon
+    {
+    <br />
+    @Html.Partial("Arama")
+    @{Html.RenderAction("KategoriListesi", "Kategori");}
+
+}
+

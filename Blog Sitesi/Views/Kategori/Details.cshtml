@@ -1,0 +1,24 @@
+﻿@model Blog_Sitesi.Models.Kategori
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detay</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriAdi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id },new { @class="btn btn-warning"}) |
+    @Html.ActionLink("Listeye Geri Dön", "Index",null, new { @class="btn btn-primary"})
+</p>

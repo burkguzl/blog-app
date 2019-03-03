@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Blog_Sitesi.Models.Kategori>
+
+
+<div class="well">
+    <h4>Blog Kategorileri</h4>
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/Blog/List/@item.Id">@item.KategoriAdi</a>
+                    </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+</div>
