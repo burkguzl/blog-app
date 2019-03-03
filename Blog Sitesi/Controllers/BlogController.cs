@@ -69,11 +69,7 @@ namespace Blog_Sitesi.Controllers
         // GET: Blog/Create
         public ActionResult Create()
         {
-            //KategoriId adında bir SelectList oluşturuyor. Daha sonra bu SelectList'in içine 
-            //db.Kategoriler ile veritabanından Kategoriler listesini çekiyor. 
-            //Bu SelectList de kullanıcı text olarak "KategoriAdi(yani kategorinin adını)" görüyor
-            //Ama biz o kategori adının "Id" si ile işlem yapıyoruz.
-
+            
             ViewBag.KategoriId = new SelectList(db.Kategoriler, "Id", "KategoriAdi");
             return View();
         }
